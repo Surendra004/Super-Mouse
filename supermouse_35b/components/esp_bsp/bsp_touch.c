@@ -3,7 +3,6 @@
 #include "esp_lcd_panel_ops.h"
 
 //#include "esp_lcd_axs15231b.h"
-#include "esp_log.h"
 #include "bsp_touch.h"
 #include "bsp_i2c.h"
 
@@ -15,14 +14,18 @@ static i2c_master_dev_handle_t dev_handle;
 
 touch_data_t g_touch_data;
 
+static uint16_t clamp_u16(uint16_t value, uint16_t max)
+{
+    return value >= max ? max - 1 : value;
+}
+
 void bsp_touch_read(void)
 {
-    uint8_t data_err_cnt = 0;
     uint8_t data[14] = {0}; /*1 Point:8;  2 Point: 14 */
     uint8_t read_cmd[11] = {0xb5, 0xab, 0xa5, 0x5a, 0x00, 0x00, 0x00, 0x0e, 0x00, 0x00, 0x00};
-    uint16_t temp_x = 0;
-    uint16_t temp_y = 0;
     esp_err_t err = ESP_OK;
+
+    g_touch_data.touch_num = 0;
     if (bsp_i2c_lock(0))
     {
         // i2c_master_transmit(dev_handle, read_cmd, 11, pdMS_TO_TICKS(1000));
@@ -35,12 +38,11 @@ void bsp_touch_read(void)
         }
         // printf("Received: %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13]);
         if (data[1] == 0 || data[2] == 0 || data[3] < 2 || data[5] < 2 ) {
-            return ;
+            return;
         }
         
         if (data[0] == 0xff || data[1] > 2)
         {
-            g_touch_data.touch_num = 0;
             return;
         }
 
@@ -49,6 +51,8 @@ void bsp_touch_read(void)
         {
             g_touch_data.coords[i].x = ((data[6 * i + 2] & 0x0F) << 8) | data[6 * i + 3];
             g_touch_data.coords[i].y = ((data[6 * i + 4] & 0x0F) << 8) | data[6 * i + 5];
+            g_touch_data.coords[i].x = clamp_u16(g_touch_data.coords[i].x, g_width);
+            g_touch_data.coords[i].y = clamp_u16(g_touch_data.coords[i].y, g_height);
         }
     }
 }
@@ -79,7 +83,10 @@ bool bsp_touch_get_coordinates(touch_data_t *touch_data)
             touch_data->coords[i].y = g_touch_data.coords[i].y;
             break;
         }
+        touch_data->coords[i].x = clamp_u16(touch_data->coords[i].x, g_width);
+        touch_data->coords[i].y = clamp_u16(touch_data->coords[i].y, g_height);
     }
+    touch_data->touch_num = g_touch_data.touch_num;
     return true;
 }
 

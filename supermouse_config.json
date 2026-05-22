@@ -1,0 +1,56 @@
+{
+  "background": {
+    "color": "181A24",
+    "image": "aurora"
+  },
+  "widgets": [
+    {
+      "title": "Clock",
+      "line1": "Auto time",
+      "line2": "Weather"
+    },
+    {
+      "title": "PC",
+      "line1": "Photos",
+      "line2": "Files ready"
+    }
+  ],
+  "apps": [
+    {
+      "name": "Chrome",
+      "abbr": "G",
+      "color": "4285F4",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+      "name": "Word",
+      "abbr": "W",
+      "color": "2B579A",
+      "path": "winword"
+    },
+    {
+      "name": "Excel",
+      "abbr": "X",
+      "color": "217346",
+      "path": "excel"
+    },
+    {
+      "name": "PowerPnt",
+      "abbr": "P",
+      "color": "D04423",
+      "path": "powerpnt"
+    },
+    {
+      "name": "VS Code",
+      "abbr": "VS",
+      "color": "007ACC",
+      "path": "code"
+    },
+    {
+      "name": "Touchpad",
+      "abbr": "TP",
+      "color": "34C759",
+      "path": "__touchpad__"
+    }
+  ]
+}
