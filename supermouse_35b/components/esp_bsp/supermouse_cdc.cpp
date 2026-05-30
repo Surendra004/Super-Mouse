@@ -25,6 +25,8 @@ void lvgl_ui_set_song(const char *title);
 void lvgl_ui_set_app_slot(int i, const char *name, const char *abbr, uint32_t color);
 void lvgl_ui_set_widget(int i, const char *title, const char *line1, const char *line2);
 void lvgl_ui_set_background(uint32_t color);
+void lvgl_ui_add_keyboard_word(const char *word);
+void lvgl_ui_add_keyboard_pair(const char *previous, const char *next);
 bool lvgl_ui_background_upload_begin(size_t size);
 bool lvgl_ui_background_upload_write(const uint8_t *data, size_t len);
 bool lvgl_ui_background_upload_end(void);
@@ -89,6 +91,32 @@ static void handle_line(char *line)
         char temp[16] = {}, cond[32] = {};
         sscanf(line + 8, "%15s %31[^\n]", temp, cond);
         lvgl_ui_set_weather(temp, cond);
+        return;
+    }
+
+    /* VOICE <line1>|<line2> */
+    if (strncmp(line, "VOICE ", 6) == 0) {
+        char *cursor = line + 6;
+        char *line1 = next_field(&cursor);
+        char *line2 = next_field(&cursor);
+        lvgl_ui_set_widget(1, "Voice", line1 ? line1 : "", line2 ? line2 : "");
+        return;
+    }
+
+    /* KWORD <word> - learned keyboard word from PC launcher */
+    if (strncmp(line, "KWORD ", 6) == 0) {
+        lvgl_ui_add_keyboard_word(line + 6);
+        return;
+    }
+
+    /* KPAIR <previous>|<next> - learned next-word pair */
+    if (strncmp(line, "KPAIR ", 6) == 0) {
+        char *cursor = line + 6;
+        char *previous = next_field(&cursor);
+        char *next = next_field(&cursor);
+        if (previous && next) {
+            lvgl_ui_add_keyboard_pair(previous, next);
+        }
         return;
     }
 
@@ -253,4 +281,22 @@ void supermouse_cdc_send_mouse_click(int button)
     char msg[24];
     int  len = snprintf(msg, sizeof(msg), "CLICK %d\n", button);
     usb_serial_jtag_write_bytes((const uint8_t *)msg, len, pdMS_TO_TICKS(20));
+}
+
+void supermouse_cdc_send_text(const char *text)
+{
+    if (!text || !text[0]) return;
+
+    char msg[96];
+    int len = snprintf(msg, sizeof(msg), "TEXT %.80s\n", text);
+    usb_serial_jtag_write_bytes((const uint8_t *)msg, len, pdMS_TO_TICKS(50));
+}
+
+void supermouse_cdc_send_word(const char *word)
+{
+    if (!word || !word[0]) return;
+
+    char msg[96];
+    int len = snprintf(msg, sizeof(msg), "WORD %.80s\n", word);
+    usb_serial_jtag_write_bytes((const uint8_t *)msg, len, pdMS_TO_TICKS(50));
 }

@@ -386,7 +386,11 @@ static void lvgl_port_task(void *arg)
         } else if (task_delay_ms < 1) {
             task_delay_ms = 1;
         }
-        vTaskDelay(pdMS_TO_TICKS(task_delay_ms));
+        TickType_t delay_ticks = pdMS_TO_TICKS(task_delay_ms);
+        if (delay_ticks < 1) {
+            delay_ticks = 1;
+        }
+        vTaskDelay(delay_ticks);
     }
 
     lvgl_port_task_deinit();
