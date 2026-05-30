@@ -1,0 +1,669 @@
+{
+  "background": {
+    "color": "181A24",
+    "image": "aurora"
+  },
+  "weather": {
+    "location": "Bengaluru",
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "units": "m"
+  },
+  "keyboard_words": {
+    "helhello": 1,
+    "how": 27,
+    "redo": 2,
+    "sorry": 3,
+    "are": 19,
+    "you": 16,
+    "doing": 13,
+    "and": 21,
+    "everything": 11,
+    "is": 22,
+    "fine": 5,
+    "alright": 3,
+    "hello": 18,
+    "surendra": 4,
+    "hey": 4,
+    "home": 4,
+    "sunny": 3,
+    "hi": 2,
+    "no": 6,
+    "later": 1,
+    "my": 6,
+    "meeting": 1,
+    "name": 4,
+    "rain": 2,
+    "rijas": 2,
+    "weather": 2,
+    "now": 3,
+    "in": 4,
+    "delhi": 1,
+    "yes": 1,
+    "id": 1,
+    "great": 1,
+    "office": 2,
+    "am": 4,
+    "good": 6,
+    "for": 3,
+    "amazon": 1,
+    "com": 7,
+    "search": 5,
+    "apple": 1,
+    "iphone": 1,
+    "recharge": 1,
+    "after": 1,
+    "sex": 1,
+    "chrome": 1,
+    "open": 1,
+    "new": 1,
+    "tab": 1,
+    "the": 12,
+    "things": 3,
+    "going": 1,
+    "on": 2,
+    "time": 1,
+    "right": 2,
+    "date": 1,
+    "may": 1,
+    "have": 3,
+    "to": 11,
+    "finalise": 1,
+    "increment": 1,
+    "sheet": 1,
+    "by": 1,
+    "today": 1,
+    "also": 2,
+    "discuss": 1,
+    "with": 1,
+    "director": 1,
+    "what": 4,
+    "status": 1,
+    "next": 1,
+    "future": 1,
+    "all": 2,
+    "do": 1,
+    "it": 2,
+    "so": 3,
+    "please": 1,
+    "little": 1,
+    "busy": 1,
+    "there": 2,
+    "many": 1,
+    "work": 1,
+    "identify": 1,
+    "longer": 1,
+    "sentences": 1,
+    "not": 1,
+    "working": 1,
+    "we": 1,
+    "need": 1,
+    "check": 1,
+    "ok": 2,
+    "climate": 1,
+    "or": 1,
+    "type": 1,
+    "moto": 1,
+    "go": 3,
+    "selfie": 1,
+    "cello": 1,
+    "cell": 1,
+    "then": 1,
+    "help": 1,
+    "enter": 1,
+    "outside": 1,
+    "india": 1,
+    "calculate": 1,
+    "increase": 1,
+    "brightness": 1,
+    "reduce": 1,
+    "volume": 1,
+    "into": 1,
+    "scheme": 1,
+    "said": 2,
+    "given": 1,
+    "here": 1,
+    "put": 1,
+    "pc": 1,
+    "energy": 1,
+    "saver": 1,
+    "mode": 1,
+    "rate": 1,
+    "of": 1,
+    "chennai": 1,
+    "boxing": 1,
+    "email": 1,
+    "download": 1,
+    "folder": 1,
+    "asked": 1,
+    "print": 1,
+    "but": 1,
+    "was": 1,
+    "output": 1,
+    "arctic": 2,
+    "fox": 2,
+    "apex": 1
+  },
+  "keyboard_pairs": {
+    "no": {
+      "home": 1,
+      "you": 1,
+      "output": 1
+    },
+    "home": {
+      "no": 1
+    },
+    "hello": {
+      "yes": 1,
+      "great": 1,
+      "office": 1,
+      "how": 4
+    },
+    "how": {
+      "are": 11,
+      "sorry": 1,
+      "everything": 1,
+      "is": 1,
+      "enter": 1
+    },
+    "are": {
+      "you": 10,
+      "the": 1,
+      "many": 1,
+      "not": 1,
+      "given": 1
+    },
+    "you": {
+      "my": 1,
+      "doing": 8,
+      "and": 1,
+      "said": 1,
+      "are": 1
+    },
+    "my": {
+      "name": 1,
+      "director": 1,
+      "pc": 1
+    },
+    "name": {
+      "is": 1,
+      "id": 1
+    },
+    "is": {
+      "redo": 1,
+      "fine": 4,
+      "everything": 3,
+      "and": 1,
+      "may": 1,
+      "status": 1,
+      "the": 2,
+      "good": 1,
+      "or": 1,
+      "ok": 1
+    },
+    "redo": {
+      "name": 1
+    },
+    "sorry": {
+      "sunny": 2
+    },
+    "sunny": {
+      "how": 1
+    },
+    "doing": {
+      "am": 2,
+      "good": 3,
+      "and": 3,
+      "to": 1,
+      "help": 1
+    },
+    "am": {
+      "doing": 3,
+      "little": 1
+    },
+    "good": {
+      "for": 2,
+      "how": 1,
+      "and": 1,
+      "hi": 1
+    },
+    "for": {
+      "everything": 2,
+      "apple": 1
+    },
+    "everything": {
+      "is": 6,
+      "alright": 2
+    },
+    "in": {
+      "amazon": 1,
+      "energy": 1,
+      "the": 1
+    },
+    "amazon": {
+      "com": 1
+    },
+    "com": {
+      "search": 1
+    },
+    "search": {
+      "for": 1,
+      "outside": 1,
+      "arctic": 1,
+      "apex": 1
+    },
+    "apple": {
+      "iphone": 1
+    },
+    "after": {
+      "sex": 1
+    },
+    "sex": {
+      "com": 1
+    },
+    "chrome": {
+      "and": 1
+    },
+    "and": {
+      "open": 1,
+      "am": 1,
+      "the": 3,
+      "also": 2,
+      "what": 2,
+      "all": 2,
+      "how": 2,
+      "there": 1,
+      "ok": 1,
+      "then": 1,
+      "reduce": 1,
+      "everything": 1
+    },
+    "open": {
+      "new": 1
+    },
+    "new": {
+      "tab": 1
+    },
+    "alright": {
+      "and": 2
+    },
+    "the": {
+      "things": 1,
+      "time": 1,
+      "date": 1,
+      "increment": 1,
+      "next": 1,
+      "longer": 1,
+      "climate": 1,
+      "weather": 1,
+      "brightness": 1,
+      "volume": 1,
+      "rate": 1,
+      "download": 1
+    },
+    "things": {
+      "going": 1,
+      "have": 1,
+      "to": 1
+    },
+    "going": {
+      "on": 1
+    },
+    "on": {
+      "and": 2
+    },
+    "time": {
+      "right": 1
+    },
+    "right": {
+      "now": 1,
+      "you": 1
+    },
+    "now": {
+      "is": 1
+    },
+    "date": {
+      "is": 1
+    },
+    "may": {
+      "have": 1
+    },
+    "have": {
+      "to": 3
+    },
+    "to": {
+      "finalise": 1,
+      "discuss": 1,
+      "do": 1,
+      "work": 1,
+      "check": 1,
+      "office": 1,
+      "selfie": 1,
+      "cello": 1,
+      "cell": 1,
+      "and": 1,
+      "print": 1
+    },
+    "finalise": {
+      "the": 1
+    },
+    "increment": {
+      "sheet": 1
+    },
+    "sheet": {
+      "by": 1
+    },
+    "by": {
+      "today": 1
+    },
+    "today": {
+      "and": 1
+    },
+    "also": {
+      "have": 1,
+      "am": 1
+    },
+    "discuss": {
+      "with": 1
+    },
+    "with": {
+      "my": 1
+    },
+    "director": {
+      "what": 1
+    },
+    "what": {
+      "is": 3,
+      "and": 1
+    },
+    "status": {
+      "and": 1
+    },
+    "next": {
+      "future": 1
+    },
+    "future": {
+      "and": 1
+    },
+    "all": {
+      "things": 1,
+      "the": 1
+    },
+    "do": {
+      "it": 1
+    },
+    "it": {
+      "so": 1,
+      "but": 1
+    },
+    "so": {
+      "please": 1,
+      "we": 1
+    },
+    "fine": {
+      "and": 1
+    },
+    "little": {
+      "busy": 1
+    },
+    "busy": {
+      "and": 1
+    },
+    "there": {
+      "are": 1,
+      "was": 1
+    },
+    "many": {
+      "things": 1
+    },
+    "work": {
+      "on": 1
+    },
+    "identify": {
+      "the": 1
+    },
+    "longer": {
+      "sentences": 1
+    },
+    "sentences": {
+      "are": 1
+    },
+    "not": {
+      "working": 1
+    },
+    "working": {
+      "so": 1
+    },
+    "we": {
+      "need": 1
+    },
+    "need": {
+      "to": 1
+    },
+    "ok": {
+      "everything": 1
+    },
+    "office": {
+      "everything": 1
+    },
+    "climate": {
+      "is": 1
+    },
+    "or": {
+      "and": 1
+    },
+    "weather": {
+      "is": 1
+    },
+    "moto": {
+      "go": 1
+    },
+    "go": {
+      "to": 3
+    },
+    "then": {
+      "good": 1
+    },
+    "help": {
+      "good": 1
+    },
+    "hi": {
+      "how": 1
+    },
+    "enter": {
+      "sorry": 1
+    },
+    "outside": {
+      "india": 1
+    },
+    "india": {
+      "com": 1
+    },
+    "increase": {
+      "the": 1
+    },
+    "brightness": {
+      "to": 1
+    },
+    "reduce": {
+      "the": 1
+    },
+    "volume": {
+      "into": 1
+    },
+    "scheme": {
+      "no": 1
+    },
+    "said": {
+      "right": 1,
+      "to": 1
+    },
+    "given": {
+      "here": 1
+    },
+    "here": {
+      "so": 1
+    },
+    "put": {
+      "my": 1
+    },
+    "pc": {
+      "in": 1
+    },
+    "energy": {
+      "saver": 1
+    },
+    "saver": {
+      "mode": 1
+    },
+    "rate": {
+      "of": 1
+    },
+    "of": {
+      "chennai": 1
+    },
+    "chennai": {
+      "com": 1
+    },
+    "boxing": {
+      "email": 1
+    },
+    "download": {
+      "folder": 1
+    },
+    "folder": {
+      "asked": 1
+    },
+    "asked": {
+      "said": 1
+    },
+    "print": {
+      "it": 1
+    },
+    "but": {
+      "there": 1
+    },
+    "was": {
+      "no": 1
+    },
+    "arctic": {
+      "fox": 2
+    },
+    "fox": {
+      "com": 2
+    },
+    "apex": {
+      "com": 1
+    }
+  },
+  "assistant": {
+    "notes": [
+      {
+        "time": "2026-05-28T11:41:16",
+        "text": "My mobile number is 123456 78."
+      }
+    ],
+    "reminders": [],
+    "alarms": [
+      {
+        "id": "b5e2d872",
+        "time": "2026-05-28T11:24:17",
+        "due": "2026-05-28T12:00:00",
+        "text": "Alarm",
+        "done": true
+      },
+      {
+        "id": "cbb43fee",
+        "time": "2026-05-28T11:40:29",
+        "due": "2026-05-28T12:05:00",
+        "text": "Alarm",
+        "done": true
+      },
+      {
+        "id": "0ee980eb",
+        "time": "2026-05-28T16:09:26",
+        "due": "2026-05-28T18:00:00",
+        "text": "Alarm",
+        "done": true
+      },
+      {
+        "id": "93e00601",
+        "time": "2026-05-28T16:15:02",
+        "due": "2026-05-28T18:00:00",
+        "text": "Alarm",
+        "done": true
+      }
+    ],
+    "timers": [
+      {
+        "id": "49b9819c",
+        "time": "2026-05-28T17:03:11",
+        "due": "2026-05-28T17:04:11",
+        "seconds": 60,
+        "text": "Timer",
+        "done": true
+      }
+    ]
+  },
+  "email_summary": {
+    "enabled": false,
+    "daily_time": "18:00",
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_user": "",
+    "smtp_password": "",
+    "from": "",
+    "to": "",
+    "last_sent_date": ""
+  },
+  "widgets": [
+    {
+      "title": "Clock",
+      "line1": "Auto time",
+      "line2": "Weather"
+    },
+    {
+      "title": "PC",
+      "line1": "Photos",
+      "line2": "Files ready"
+    }
+  ],
+  "apps": [
+    {
+      "name": "Chrome",
+      "abbr": "G",
+      "color": "4285F4",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+      "name": "Word",
+      "abbr": "W",
+      "color": "2B579A",
+      "path": "winword"
+    },
+    {
+      "name": "Excel",
+      "abbr": "X",
+      "color": "217346",
+      "path": "excel"
+    },
+    {
+      "name": "PowerPnt",
+      "abbr": "P",
+      "color": "D04423",
+      "path": "powerpnt"
+    },
+    {
+      "name": "VS Code",
+      "abbr": "VS",
+      "color": "007ACC",
+      "path": "code"
+    },
+    {
+      "name": "Touchpad",
+      "abbr": "TP",
+      "color": "34C759",
+      "path": "__touchpad__"
+    }
+  ]
+}

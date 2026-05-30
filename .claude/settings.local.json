@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($idfPath = \\(Get-Command idf.py -ErrorAction SilentlyContinue\\).Source; Write-Output \"idf.py: $idfPath\"; $env:IDF_PATH; python -c \"import os; print\\(os.environ.get\\('IDF_PATH','not set'\\)\\)\" 2>$null)",
+      "PowerShell(Get-PSDrive -PSProvider FileSystem | ForEach-Object { Write-Output $_.Root }; Test-Path \"C:\\\\esp\\\\v6.0.1\\\\esp-idf\")",
+      "PowerShell(Rename-Item \"C:\\\\Users\\\\User\\\\Downloads\\\\supermouse_35b\\\\supermouse_35b\\\\components\\\\esp_bsp\\\\supermouse_cdc.c\" \"supermouse_cdc.cpp\")"
+    ]
+  }
+}
